@@ -106,7 +106,6 @@ function displayResult(playerSelection, computerSelection, lastResult) {
 
     playerSelection = capitalizeFirstLetterOnly(playerSelection);
     computerSelection = capitalizeFirstLetterOnly(computerSelection);
-    console.log(playerSelection);
 
     pLastResult.textContent = getResultText(playerSelection, computerSelection, lastResult);
     pScore.textContent = playerScore + " - " + computerScore;
