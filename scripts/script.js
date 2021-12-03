@@ -48,6 +48,10 @@ function getResultText(playerSelection, computerSelection, result) {
     }
 }
 
+function getScoreText() {
+    return playerScore + " - " + computerScore;
+}
+
 function getWinnerText() {
     if (playerScore >= 5) {
         return 'Wow! You won the game!'
@@ -69,7 +73,7 @@ function displayResult(playerSelection, computerSelection, lastResult) {
     computerSelection = capitalizeFirstLetterOnly(computerSelection);
 
     pLastResult.textContent = getResultText(playerSelection, computerSelection, lastResult);
-    pScore.textContent = playerScore + " - " + computerScore;
+    pScore.textContent = getScoreText();
     pWinner.textContent = getWinnerText();
 }
 
@@ -94,5 +98,3 @@ const playButtons = document.querySelectorAll('.play-button');
 playButtons.forEach(playButton => playButton.addEventListener('click', e => {
     playRound(e.target.getAttribute('data-sel'));
 }));
-
-//game()
