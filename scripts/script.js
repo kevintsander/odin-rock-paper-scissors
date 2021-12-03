@@ -1,45 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-/* function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let tiesCount = 0;
-    //let gamesToPlay = 5;
-
-    for (let i = 1; i <= gamesToPlay; i++) {
-        let playerSelection = prompt("What's your play? (Rock/Paper/Scissors)");
-        let computerSelection = computerPlay();
-        let result = playRound(playerSelection, computerSelection);
-
-        let roundText = `Round ${i}: `
-        if (result === 0) {
-            tiesCount++;
-            console.log(`${roundText}Tie. Both players played ${computerSelection}`);
-        }
-        else if (result === 1) {
-            playerWinCount++;
-            console.log(`${roundText}You won! ${playerSelection} beats ${computerSelection}`);
-
-        }
-        else if (result === -1) {
-            computerWinCount++;
-            console.log(`${roundText}You lost! ${computerSelection} beats ${playerSelection}`)
-        }
-    }
-
-    console.log(`Results:\nYou: ${playerWinCount}\tComputer: ${computerWinCount}\tTies: ${tiesCount}`)
-    if (playerWinCount > computerWinCount) {
-        console.log("Winner: YOU! :)");
-    }
-    else if (playerWinCount < computerWinCount) {
-        console.log("Winner: CPU :(");
-    }
-    else {
-        console.log("Nobody!!! :/");
-    }
-} */
-
 function playRound(playerSelection) {
     let computerSelection = computerPlay();
     let roundResult = getRoundResult(playerSelection, computerSelection)
