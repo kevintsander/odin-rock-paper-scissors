@@ -1,10 +1,11 @@
-game()
+let playerScore = 0;
+let computerScore = 0;
 
-function game() {
-    let playerWinCount = 0;
-    let computerWinCount = 0;
+/* function game() {
+    let playerScore = 0;
+    let computerScore = 0;
     let tiesCount = 0;
-    let gamesToPlay = 5;
+    //let gamesToPlay = 5;
 
     for (let i = 1; i <= gamesToPlay; i++) {
         let playerSelection = prompt("What's your play? (Rock/Paper/Scissors)");
@@ -37,7 +38,7 @@ function game() {
     else {
         console.log("Nobody!!! :/");
     }
-}
+} */
 
 function playRound(playerSelection, computerSelection) {
 
@@ -73,3 +74,13 @@ function computerPlay() {
         return "Scissors";
     }
 }
+
+const playButtons = document.querySelectorAll('.play-button');
+
+playButtons.forEach(playButton => {
+    playButton.addEventListener('click', e => {
+        console.log(playRound(e.target.getAttribute('data-sel'), computerPlay()));
+    })
+})
+
+//game()
